@@ -15,9 +15,9 @@ class EmployeeAdmin(admin.ModelAdmin):
         "designation"
     ]
     fieldsets = [
-        ("Personal Information", {"fields": ["first_name", "last_name", "email", "mobile", "date_of_birth", "photo"]}),
-        ("Employment Related Fields", {"fields": ["date_of_joining", "department", "designation", "salary", "date_of_leave"]}),
-        ("Verbose and Optionals", {"fields": ["responsibilities"]})
+        ("Personal Information", {"fields": [("first_name", "last_name"), ("email", "mobile"), "date_of_birth", "photo"]}),
+        ("Employment Related Fields", {"fields": ["date_of_joining", ("department", "designation"), "salary", "date_of_leave"]}),
+        ("Verbose and Optionals", {"classes": ["collapse"], "fields": ["responsibilities"]})
     ]
 
 

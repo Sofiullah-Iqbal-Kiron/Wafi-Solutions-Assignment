@@ -6,12 +6,14 @@ from django.db.models import (
     DateField,
     EmailField,
     PositiveIntegerField,
+    ForeignKey
 )
 from phonenumber_field.modelfields import PhoneNumberField
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFit
 
 # local
+from company.models import Department
 from .validators import salary_validator
 from .constants import DEPARTMENT_CHOICES
 from .utils import get_largest_choice
